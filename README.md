@@ -1,4 +1,4 @@
-# how-to-build-nodeos 如何构建Nodeos-EOS节点 
+# how to build nodeos 如何搭建Nodeos-EOS节点 
 ## 前置条件(Options)
 ### 主机
 - CentOS 7.4 64位
