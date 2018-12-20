@@ -15,7 +15,7 @@ sudo usermod -aG docker your-user
 yum install docker-compose
 ```
 
-## 初始数据
+## 初始数据(Options)
 [eosnode](https://eosnode.tools)网站提供了昨日最新的备份数据，不需要Nodeos从其它节点慢慢同步...
 当然也可以跳过此步骤
 
