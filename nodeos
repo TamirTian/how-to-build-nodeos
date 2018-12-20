@@ -7,13 +7,13 @@ then
   docker-compose down
 elif [ $1 = "start" ]
 then
-    docker-compose up -d
+  docker-compose up -d
 elif [ $1 = "replay" ]
 then
-    docker-compose down && docker-compose -f ./docker-compose-replay.yml up -d
+  docker-compose down && docker-compose -f ./docker-compose-replay.yml up -d
 elif [ $1 = "init" ]
 then
-    docker-compose down && docker-compose -f ./docker-compose-init.yml up -d
+  docker-compose down && docker-compose -f ./docker-compose-init.yml up -d
 else
    exit 1
 fi
