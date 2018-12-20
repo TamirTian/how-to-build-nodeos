@@ -31,7 +31,7 @@ yum install axel
 axel -n 30 $(wget --quiet "https://eosnode.tools/api/blocks?limit=1" -O- | jq -r '.data[0].s3') -o blocks_backup.tar.gz
 
 # Uncompress to ./blocks
-mkdir ./nodeos-data-dir && tar xvzf blocks_2018-12-19-07-01.tar.gz -C ./nodeos-data-dir
+mkdir ./nodeos-data-dir && tar xvzf blocks_backup.tar.gz -C ./nodeos-data-dir
 ```
 
 ## 启动Nodeos
