@@ -1,4 +1,4 @@
-# How to build nodeos with mongo 如何搭建Nodeos-EOS节点
+# 如何搭建Nodeos-EOS节点
 同时数据写入Mongo，作为分析使用
 
 ## 前置条件(Options)
