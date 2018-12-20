@@ -1,0 +1,12 @@
+version: "3"
+
+services:
+  nodeosd:
+    stop_grace_period: 20m
+    cap_add:
+      - IPC_LOCK
+    image: eosio/eos:v1.5.2
+    command: "/opt/eosio/bin/nodeos --mongodb-uri ${MONGO_URI} --data-dir /opt/eosio/bin/data-dir/ --config-dir=/etc/nodeos --delete-all-blocks --mongodb-wipe"
+    volumes:
+      - /data/nodeos-data-dir/:/opt/eosio/bin/data-dir/
+      - ./config.ini:/etc/nodeos/config.ini:ro
