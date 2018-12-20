@@ -2,13 +2,18 @@
 # TODO
 export MONGO_URI=EMPTY
 
-if [ "$1" -eq "stop" ]
+if [ $1 = "stop" ]
+then
   docker-compose down
-  elif [ "$1" -eq "start" ]
+elif [ $1 = "start" ]
+then
     docker-compose up -d
-  elif [ "$1" -eq "replay" ]
-    docker-compose down && docker-compose up -f ./docker-compose-replay.yml -d
-  else [ "$1" -eq "init" ]
-    docker-compose down && docker-compose up -f ./docker-compose-init.yml -d
+elif [ $1 = "replay" ]
+then
+    docker-compose down && docker-compose -f ./docker-compose-replay.yml up -d
+elif [ $1 = "init" ]
+then
+    docker-compose down && docker-compose -f ./docker-compose-init.yml up -d
+else
    exit 1
 fi
