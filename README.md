@@ -1,4 +1,6 @@
-# How to build nodeos 如何搭建Nodeos-EOS节点 
+# How to build nodeos with mongo 如何搭建Nodeos-EOS节点
+同时数据写入Mongo，作为分析使用
+
 ## 前置条件(Options)
 ### 主机
 - CentOS 7.4 64位
@@ -11,7 +13,7 @@
 curl -fsSL https://get.docker.com | bash -s docker --mirror Aliyun
 # Add your user to docker group
 sudo usermod -aG docker your-user
-# 
+#
 yum install docker-compose
 ```
 
@@ -38,6 +40,8 @@ mkdir ./nodeos-data-dir && tar xvzf blocks_backup.tar.gz -C ./nodeos-data-dir
 ```bash
 git clone https://github.com/TamirTian/how-to-build-nodeos.git nodeos
 cd nodeos
+# 配置Mongo URI
+vim nodeos
 # 如果有备份数据执行。注意：后期维护启动请用start
 ./nodeos replay
 # 无备份数据执行
