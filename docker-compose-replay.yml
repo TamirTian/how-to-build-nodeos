@@ -6,7 +6,7 @@ services:
     cap_add:
       - IPC_LOCK
     image: eosio/eos:v1.5.2
-    command: "/opt/eosio/bin/nodeos --mongodb-uri ${MONGO_URI} --data-dir /opt/eosio/bin/data-dir/ --genesis-json /etc/nodeos/genesis.json --config-dir=/etc/nodeos --replay-blockchain"
+    command: "/opt/eosio/bin/nodeos --mongodb-uri ${MONGO_URI} --data-dir /opt/eosio/bin/data-dir/ --genesis-json /etc/nodeos/genesis.json --config-dir=/etc/nodeos --replay-blockchain --mongodb-wipe"
     volumes:
       - /data/nodeos-data-dir/:/opt/eosio/bin/data-dir/
       - ./config.ini:/etc/nodeos/config.ini:ro
